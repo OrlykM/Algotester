@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main () {
+   int pod,V=0,K=0,Vpart=0,Kpart=0;
+   cin>>pod;
+   string VK;
+   cin>>VK;
+   for (int i=0;i<pod;i++){
+     if (VK[i]=='V'){V++;}
+     else K++;
+   if (V>=11 && V-K>=2){Vpart++;
+   V=0;K=0;}
+   if (K>=11 && K-V>=2){Kpart++;
+   V=0;K=0;}
+   }
+   cout<<Kpart<<":"<<Vpart<<endl;
+   if (V!=0 || K!=0){cout<<K<<":"<<V;}
+   system ("pause");
+   }
